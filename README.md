@@ -1,21 +1,19 @@
 # Set up
 
-1. Create a new project using djangoadmin :
+1. Git clone the repository in your desired folder
 
-    ```bash
-    django-admin startproject test_proj
-    ```
-2. Create and activate virtual environment
-3. Install django
-4. Start project using this template, ensuring to replace `test_proj` with the appropriate project name on the command below:
+2. Run `pipenv --python3.10` to setup your virtual environment, or whichever environment you're on
 
-    ```bash
-    django-admin startproject --template https://github.com/christinegatwiri/django_template/archive/refs/heads/main.zip test_proj .
-    ```
-5. Rename all the `.template` files by removing the `.template` extensions
+3. After it has been set up successfully, run `pipenv shell` to activate the environment.
 
-6. Rename the `env` to `.env`
+4. Run `pipenv install` to install the packages used. 
 
-7. Populate the `.env` with real values
+5. Creat your `.env` file and add the required fields
 
-8. Setup your database, and run migrations.
+6. Setup the postgres database locally, using the settings in the `.env` file.
+
+7. Run `python manage.py migrate` to apply migrations to your db
+
+8. Run `python manage.py createsuperuser` and create a superuser
+
+9. Run `python manage.py runserver` to run your server on `http://localhost:8000`
